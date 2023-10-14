@@ -15,7 +15,7 @@ export default function Success() {
           A confirmation email has been sent to <strong>ash@loremcompany.com</strong>. Please
           open it and click the button inside to confirm your subscription.
         </p>
-        <button className="mt-auto bg-charcoal_grey text-white w-full rounded-lg p-4 mb-4">Dismiss message</button>
+        <button className="mt-auto bg-charcoal_grey text-white w-full rounded-lg p-4 mb-4"><a href="/">Dismiss message</a></button>
       </div>
     );
 }
