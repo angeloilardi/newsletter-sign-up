@@ -47,32 +47,42 @@ export default function Home() {
                 <p>And much more!</p>
               </li>
             </ul>
-            <form action="" className="mt-8">
+            <form action="/success" className="mt-8 group">
               <label htmlFor="email">
-                <span className="block text-xs font-bold">Email address</span>
+                <div className="flex">
+                  <span className="inline-block text-xs font-bold">
+                    Email address
+                  </span>
+                  <span className="ml-auto group-invalid:inline-block text-xs font-bold text-tomato hidden">
+                    Valid email required
+                  </span>
+                </div>
                 <input
                   type="email"
                   name="email"
                   id="email"
                   placeholder="email@company.com"
-                  className="focus:border-gray-500 focus:outline-none focus:ring-0 form-input rounded-lg w-full  mt-2 p-4 placeholder:gray-300 invalid:ring-tomato invalid:text-tomato  invalid:bg-tomato/20 peer border-gray-300 shadow-sm invalid:focus:border-tomato"
+                  required
+                  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                  className="focus:border-gray-500 focus:outline-none focus:ring-0 form-input rounded-lg w-full  mt-2 p-4 placeholder:gray-300  invalid:[&:not(:placeholder-shown):not(:focus)]:text-tomato  invalid:[&:not(:placeholder-shown):not(:focus)]:bg-tomato/20 peer border-gray-300 shadow-sm invalid:[&:not(:placeholder-shown):not(:focus)]:border-tomato"
                 />
-                <p className=" invisible block text-xs font-bold peer-invalid:visible text-tomato">
-                  Valid email required
-                </p>
-                <button className="bg-charcoal_grey text-white w-full rounded-lg p-4 mt-4">
+                <button
+                  className="bg-charcoal_grey text-white w-full rounded-lg p-4 mt-4 group-invalid:pointer-events-none"
+                  type="submit"
+                >
                   Subscribe to monthly newsletter
                 </button>
               </label>
             </form>
           </div>
           <div>
-            <img
+            <Image
+              className="hidden md:block"
               src="/assets/images/illustration-sign-up-desktop.svg"
               alt=""
               height={500}
               width={500}
-            ></img>
+            ></Image>
           </div>
         </main>
       </div>
