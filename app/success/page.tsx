@@ -24,8 +24,8 @@ export default function Success() {
         <strong>{searchParams.get("email")}</strong>. Please open it and click
         the button inside to confirm your subscription.
       </p>
-      <a href="/">
-        <button className="mt-auto bg-charcoal_grey text-white w-full rounded-lg p-4 mb-4 md:mt-7">
+      <a href="/" className="mt-auto">
+        <button className=" bg-charcoal_grey text-white w-full rounded-lg p-4 mb-4 md:mt-7">
           Dismiss message
         </button>
       </a>
