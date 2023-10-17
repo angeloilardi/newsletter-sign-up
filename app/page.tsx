@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import Link from "next/link";
-import {useState } from "react";
+import Image from 'next/image';
+import Link from 'next/link';
+import { ChangeEvent, useState } from "react";
 
 export default function Home() {
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState('');
 
   return (
     <>
-      <div className="bg-white max-w-4xl mx-auto md:rounded-3xl h-[100svh]">
+      <div className="bg-white max-w-4xl mx-auto md:rounded-3xl">
         <header className="w-full md:hidden">
           <Image
             src="./assets/images/illustration-sign-up-mobile.svg"
@@ -80,16 +80,11 @@ export default function Home() {
                   className="bg-charcoal_grey text-white w-full rounded-lg p-4 mt-4  group-invalid:pointer-events-none"
                   type="submit"
                 >
-                  <Link
-                    href={{
-                      pathname: "/success",
-                      query: {
-                        email: email,
-                      },
-                    }}
-                  >
-                    Subscribe to monthly newsletter
-                  </Link>
+                  <Link href={{
+                    pathname: '/success',
+                    query: {
+                    email: email
+                  }}}>Subscribe to monthly newsletter</Link>
                 </button>
               </label>
             </form>
