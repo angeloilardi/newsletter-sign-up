@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ChangeEvent, useState } from "react";
 
 export default function Home() {
+
   const [email, setEmail] = useState('');
 
   return (
@@ -18,7 +19,7 @@ export default function Home() {
             alt=""
           ></Image>
         </header>
-        <main className="min-h-screen flex-col w-full mx-auto md:p-5 flex md:flex-row  md:justify-end max-h-[500px] md:min-h-min md:max-h-max">
+        <main className="min-h-screen flex-col w-full mx-auto md:p-5 flex md:flex-row md:justify-end  md:min-h-min md:max-h-max">
           <div className="p-12">
             <h1 className="relative my-6 text-4xl font-bold">Stay updated!</h1>
             <p className="mb-6">
@@ -80,11 +81,16 @@ export default function Home() {
                   className="bg-charcoal_grey text-white w-full rounded-lg p-4 mt-4  group-invalid:pointer-events-none"
                   type="submit"
                 >
-                  <Link href={{
-                    pathname: '/success',
-                    query: {
-                    email: email
-                  }}}>Subscribe to monthly newsletter</Link>
+                  <Link
+                    href={{
+                      pathname: "/success",
+                      query: {
+                        email: email,
+                      },
+                    }}
+                  >
+                    Subscribe to monthly newsletter
+                  </Link>
                 </button>
               </label>
             </form>
