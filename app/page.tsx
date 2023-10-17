@@ -1,18 +1,24 @@
-import Image from 'next/image'
+"use client";
+
+import Image from "next/image";
+import Link from "next/link";
+import {useState } from "react";
 
 export default function Home() {
+  const [email, setEmail] = useState("");
+
   return (
     <>
-      <div className="bg-white max-w-4xl mx-auto md:rounded-3xl my-auto">
+      <div className="bg-white max-w-4xl mx-auto md:rounded-3xl">
         <header className="w-full md:hidden">
           <Image
             src="./assets/images/illustration-sign-up-mobile.svg"
-            width={512}
+            width={600}
             height={400}
             alt=""
           ></Image>
         </header>
-        <main className="min-h-screen flex-col w-full mx-auto p-5 flex md:flex-row  md:justify-end max-h-[500px] md:min-h-min md:max-h-max">
+        <main className="min-h-screen flex-col w-full mx-auto md:p-5 flex md:flex-row  md:justify-end max-h-[500px] md:min-h-min md:max-h-max">
           <div className="p-12">
             <h1 className="relative my-6 text-4xl font-bold">Stay updated!</h1>
             <p className="mb-6">
@@ -47,30 +53,43 @@ export default function Home() {
                 <p>And much more!</p>
               </li>
             </ul>
-            <form action="/success" className="mt-8 group">
+            <form action="/success" className="mt-8 group" noValidate>
               <label htmlFor="email">
-                <div className="flex">
-                  <span className="inline-block text-xs font-bold">
+                <div className="flex flex-wrap">
+                  <span className="inline-block text-xs font-bold order-1">
                     Email address
                   </span>
-                  <span className="ml-auto group-invalid:inline-block text-xs font-bold text-tomato hidden">
+                  <input
+                    onChange={(e) => setEmail(e.target.value)}
+                    type="email"
+                    name="email"
+                    id="email"
+                    placeholder="email@company.com"
+                    required
+                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                    className="focus:border-gray-500 focus:outline-none focus:ring-0 form-input rounded-lg w-full  mt-2 p-4 placeholder:gray-300  invalid:[&:not(:placeholder-shown):not(:focus)]:text-tomato  invalid:[&:not(:placeholder-shown):not(:focus)]:bg-tomato/20 peer border-gray-300 shadow-sm invalid:[&:not(:placeholder-shown):not(:focus)]:border-tomato peer order-3"
+                  />
+                  <span
+                    className={`ml-auto text-xs font-bold text-tomato peer-[&:not(:placeholder-shown):not(:focus):invalid]:inline-block hidden order-2 shrink
+                  }`}
+                  >
                     Valid email required
                   </span>
                 </div>
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  placeholder="email@company.com"
-                  required
-                  pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-                  className="focus:border-gray-500 focus:outline-none focus:ring-0 form-input rounded-lg w-full  mt-2 p-4 placeholder:gray-300  invalid:[&:not(:placeholder-shown):not(:focus)]:text-tomato  invalid:[&:not(:placeholder-shown):not(:focus)]:bg-tomato/20 peer border-gray-300 shadow-sm invalid:[&:not(:placeholder-shown):not(:focus)]:border-tomato"
-                />
                 <button
-                  className="bg-charcoal_grey text-white w-full rounded-lg p-4 mt-4 group-invalid:pointer-events-none"
+                  className="bg-charcoal_grey text-white w-full rounded-lg p-4 mt-4  group-invalid:pointer-events-none"
                   type="submit"
                 >
-                  Subscribe to monthly newsletter
+                  <Link
+                    href={{
+                      pathname: "/success",
+                      query: {
+                        email: email,
+                      },
+                    }}
+                  >
+                    Subscribe to monthly newsletter
+                  </Link>
                 </button>
               </label>
             </form>
