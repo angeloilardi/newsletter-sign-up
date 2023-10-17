@@ -9,7 +9,7 @@ export default function Home() {
 
   return (
     <>
-      <div className="bg-white max-w-4xl mx-auto md:rounded-3xl">
+      <div className="bg-white max-w-4xl mx-auto md:rounded-3xl h-[100svh]">
         <header className="w-full md:hidden">
           <Image
             src="./assets/images/illustration-sign-up-mobile.svg"
