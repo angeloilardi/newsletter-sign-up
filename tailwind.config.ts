@@ -23,7 +23,6 @@ const config: Config = {
   },
   plugins: [
     require('@tailwindcss/forms'),
-    require('postcss-100vh-fix'),
   ],
 }
 export default config
