@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { ChangeEvent, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
 
@@ -19,7 +19,7 @@ export default function Home() {
             alt=""
           ></Image>
         </header>
-        <main className="min-h-screen flex-col w-full mx-auto md:p-5 flex md:flex-row md:justify-end  md:min-h-min md:max-h-max">
+        <main className="flex-col w-full mx-auto md:p-5 flex md:flex-row md:justify-end  md:items-center md:min-h-max md:max-h-max">
           <div className="p-12">
             <h1 className="relative my-6 text-4xl font-bold">Stay updated!</h1>
             <p className="mb-6">

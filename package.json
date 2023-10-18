@@ -21,7 +21,8 @@
     "autoprefixer": "latest",
     "eslint": "latest",
     "eslint-config-next": "latest",
-    "postcss": "latest",
+    "postcss": "^8.4.31",
+    "postcss-100vh-fix": "^1.0.2",
     "tailwindcss": "latest",
     "typescript": "latest"
   }
