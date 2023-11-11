@@ -20,7 +20,7 @@ export default function Home() {
           ></Image>
         </header>
         <main className="flex-col w-full mx-auto md:p-5 flex md:flex-row md:justify-end  md:items-center md:min-h-max md:max-h-max">
-          <div className="p-12">
+          <div className="p-12 text-black">
             <h1 className="relative my-6 text-4xl font-bold">Stay updated!</h1>
             <p className="mb-6">
               Join 60,000+ product managers receiving monthly updates on:
@@ -54,7 +54,11 @@ export default function Home() {
                 <p>And much more!</p>
               </li>
             </ul>
-            <form action="/success" className="mt-8 group" noValidate>
+            <form
+              action={`/success/?email=${email}`}
+              className="mt-8 group"
+              noValidate
+            >
               <label htmlFor="email">
                 <div className="flex flex-wrap">
                   <span className="inline-block text-xs font-bold order-1">
@@ -77,22 +81,13 @@ export default function Home() {
                     Valid email required
                   </span>
                 </div>
-                <button
-                  className="bg-charcoal_grey text-white w-full rounded-lg p-4 mt-4  group-invalid:pointer-events-none"
-                  type="submit"
-                >
-                  <Link
-                    href={{
-                      pathname: "/success",
-                      query: {
-                        email: email,
-                      },
-                    }}
-                  >
-                    Subscribe to monthly newsletter
-                  </Link>
-                </button>
               </label>
+              <button
+                className="bg-charcoal_grey text-white w-full rounded-lg p-4 mt-4  group-invalid:pointer-events-none"
+                type="submit"
+              >
+                Subscribe to monthly newsletter
+              </button>
             </form>
           </div>
           <div>
