@@ -59,28 +59,19 @@ Users should be able to:
 
 Customising validation is a great thing. No one wants to see the browser's default message. The problem is that it's not as easy as it should be. Once again, Tailwind came to the rescue with some great handling of CSS pseudo classes like :invalid and :placeholder-shown.
 
-Another take away is that, if you only need a redirection on submit, theyou using the HTML action attribute remains the most simple and effective solution.
+Another take away is that, if you only need a redirection on submit, then using the HTML action attribute remains the most simple and effective solution.
 
 
 ### Continued development
 
-Form validation and submission are on my to-do list, especially wheren coupled with Next Server Actions.
+Form validation and submission are on my to-do list, especially when coupled with Next Server Actions.
 
 
 ### Useful resources
 
-- [DEV Coomunity article](https://dev.to/deyemiobaa/adding-custom-validation-to-a-form-with-tailwindcss-1e7d#:~:text=Preventing%20Form%20Submission&text=Since%20the%20input%20fields%20are,the%20form%20from%20being%20submitted.&text=We%20use%20the%20%3Ainvalid%20pseudo,when%20the%20form%20is%20invalid.) - This blog post helped me big time. The 
+- [DEV Coomunity article](https://dev.to/deyemiobaa/adding-custom-validation-to-a-form-with-tailwindcss-1e7d#:~:text=Preventing%20Form%20Submission&text=Since%20the%20input%20fields%20are,the%20form%20from%20being%20submitted.&text=We%20use%20the%20%3Ainvalid%20pseudo,when%20the%20form%20is%20invalid.) - This blog post helped me big time. The trick to disable the sumbit button if the form is invalid is genius!
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
-- Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/yourusername)
-- Twitter - [@yourusername](https://www.twitter.com/yourusername)
-
-**Note: Delete this note and add/remove/edit lines above based on what links you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this project. Perhaps you worked in a team or got some inspiration from someone else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you completed this challenge by yourself, feel free to delete this section entirely.**
+- Website - [https://angelo-ilardi.vercel.app/](https://angelo-ilardi.vercel.app/)
+- Frontend Mentor - [@helldorado82](https://www.frontendmentor.io/profile/helldorado82)
